@@ -2,12 +2,12 @@ import Navbar from "./components/Navbar.tsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Introduction from "./components/Introduction.tsx";
 import About from "./components/About.tsx";
+
 function App() {
   return (
-    <>
+    <div className="bg-gray-100 min-h-screen font-inter">
       <BrowserRouter>
-      <Navbar />
-
+        <Navbar />
         <Routes>
           <Route index element={<Introduction />} />
           <Route path="/about" element={<About />} />
@@ -15,7 +15,7 @@ function App() {
           <Route path="/projects" element={<About />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
